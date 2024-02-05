@@ -16,6 +16,10 @@
     --boolzapp-darkgrey: #6b7376;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     height: 100vh;
     background: rgb(0, 150, 136);
@@ -28,6 +32,7 @@ body {
 
 .app {
     width: 80vw;
+    max-width: 1920px;
     height: 95vh;
     margin: auto;
     border: 1px solid black;
@@ -37,12 +42,13 @@ body {
     width: 100%;
     height: 100%;
     border: 2px solid purple;
-    overflow: hidden;
+
 }
 
 .row {
     display: flex;
     flex-wrap: wrap;
+
 }
 
 .debug .left {
@@ -64,8 +70,10 @@ body {
 }
 
 .nav {
-    height: 100px;
+    height: 10vh;
     background-color: magenta;
+    overflow: hidden;
+    z-index: 2;
 }
 
 /* #region left */
@@ -73,34 +81,71 @@ body {
 
 
 .cookie {
-    height: 110px;
+    height: 12vh;
     background-color: aqua;
 }
 
 .search-bar {
-    height: 70px;
+    height: 8vh;
     background-color: lightgreen;
 }
 
 .list {
     width: 100%;
+    height: 65vh;
+    overflow: auto;
+
 }
 
+
+
 .member {
-    height: 130px;
+    height: 12vh;
     background-color: lightpink;
     border: 1px solid black;
+    overflow: hidden;
+
 }
 
 /* #endregion left */
+
+/* #region right */
 .container_right {
     height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
+
+}
+
+.chat_container {
+    width: 80%;
+    height: 100%;
+    margin: -1rem auto;
+    background-color: chocolate;
+    padding: 3.5rem 0;
+    overflow: auto;
+
 }
 
 
 
-/* #region right */
+.col-7 {
+    width: calc((100%/12)*7);
+
+
+}
+
+.card {
+    background-color: #fd0962;
+    border: 2px solid black;
+    margin: .5rem 0;
+}
+
+.me {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* #endregion right */
