@@ -20,4 +20,73 @@ body {
     height: 100vh;
     background: rgb(0, 150, 136);
     background: linear-gradient(180deg, rgba(0, 150, 136, 1) 15%, rgba(220, 219, 209, 1) 15%, rgba(211, 219, 220, 1) 80%);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+.app {
+    width: 80vw;
+    height: 95vh;
+    margin: auto;
+    border: 1px solid black;
+}
+
+.container {
+    width: 100%;
+    height: 600px;
+    border: 2px solid purple;
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* .debug .left {
+    height: 600px;
+    border: 1px dashed red;
+} */
+
+.debug .right {
+    height: 600px;
+    border: 1px dashed blue;
+}
+
+.col-4 {
+    width: calc((100%/12)*4);
+}
+
+.col-8 {
+    width: calc((100%/12)*8);
+}
+
+/* #region left */
+
+
+.nav {
+    height: 100px;
+    background-color: magenta;
+}
+
+.cookie {
+    height: 110px;
+    background-color: aqua;
+}
+
+.search-bar {
+    height: 70px;
+    background-color: lightgreen;
+}
+
+.list {
+    width: 100%;
+}
+
+.member {
+    height: 130px;
+    background-color: lightpink;
+    border: 1px solid black;
 }
