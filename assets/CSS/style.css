@@ -35,7 +35,7 @@ body {
 
 .container {
     width: 100%;
-    height: 600px;
+    height: 100%;
     border: 2px solid purple;
     overflow: hidden;
 }
@@ -45,13 +45,13 @@ body {
     flex-wrap: wrap;
 }
 
-/* .debug .left {
-    height: 600px;
+.debug .left {
+
     border: 1px dashed red;
-} */
+}
 
 .debug .right {
-    height: 600px;
+
     border: 1px dashed blue;
 }
 
@@ -63,13 +63,14 @@ body {
     width: calc((100%/12)*8);
 }
 
-/* #region left */
-
-
 .nav {
     height: 100px;
     background-color: magenta;
 }
+
+/* #region left */
+
+
 
 .cookie {
     height: 110px;
@@ -90,3 +91,16 @@ body {
     background-color: lightpink;
     border: 1px solid black;
 }
+
+/* #endregion left */
+.container_right {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+
+
+/* #region right */
