@@ -1,0 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* background palette */
+    --boolzapp-bg-top: #009688;
+    --boolzapp-bg-main: linear-gradient: #dcdbd1, #d3dbdc;
+    /* app palette */
+    --boolzapp-primary: #eaeaea;
+    --boolzapp-secondary: #d5f9ba;
+    --boolzapp-accent: #8edafc;
+    --boolzapp-grey: #b1b1b1;
+    --boolzapp-darkgrey: #6b7376;
+}
