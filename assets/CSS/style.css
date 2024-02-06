@@ -32,120 +32,147 @@ body {
 
 .app {
     width: 80vw;
-    max-width: 1920px;
+    max-width: 1520px;
     height: 95vh;
+    min-height: 500px;
+    max-height: 1200px;
     margin: auto;
-    border: 1px solid black;
+    border: 2px solid yellow;
 }
 
 .container {
     width: 100%;
     height: 100%;
     border: 2px solid purple;
-
-}
-
-.row {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+}
+
+.main_row {
+    display: flex;
+    flex-direction: row;
+    height: 85vh;
+    width: 100%;
+    position: absolute;
+    top: 90px;
 
 }
 
-.debug .left {
+.main.left {
+    height: 100%;
 
-    border: 1px dashed red;
 }
 
-.debug .right {
+.banner {
+    height: 100px;
+    background-color: #8edafc;
+}
 
-    border: 1px dashed blue;
+.search_bar {
+    height: 60px;
+    background-color: #d5f9ba;
+}
+
+.list {
+    height: 100%;
+    background-color: brown;
+    overflow-y: auto;
+
+}
+
+.member {
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+
+.main.right {
+    padding: 3rem 2rem;
+
+}
+
+.col-3 {
+    width: calc((100%/12)*3);
 }
 
 .col-4 {
     width: calc((100%/12)*4);
+
 }
 
 .col-8 {
     width: calc((100%/12)*8);
+
 }
 
-.nav {
-    height: 10vh;
-    background-color: magenta;
-    overflow: hidden;
-    z-index: 2;
+.col-9 {
+    width: calc((100%/12)*9);
+}
+
+.top {
+    background-color: purple;
+    height: 90px;
+    display: flex;
+}
+
+.main {
+    height: 100%;
+    background-color: #0096876c;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.bottom.col-8 {
+    background-color: purple;
+    height: 90px;
+}
+
+.avatar {
+    height: 90px;
+    aspect-ratio: 1;
+    background-color: var(--boolzapp-bg-top);
+}
+
+.box {
+    height: 90px;
+    width: 100%;
+    background-color: #6b7376;
 }
 
 /* #region left */
 
 
 
-.cookie {
-    height: 12vh;
-    background-color: aqua;
-}
 
-.search-bar {
-    height: 8vh;
-    background-color: lightgreen;
-}
-
-.list {
-    width: 100%;
-    height: 65vh;
-    overflow: auto;
-
-}
-
-
-
-.member {
-    height: 12vh;
-    background-color: lightpink;
-    border: 1px solid black;
-    overflow: hidden;
-
-}
 
 /* #endregion left */
 
 /* #region right */
-.container_right {
-    height: 95vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 
-
-}
-
-.chat_container {
-    width: 80%;
-    height: 100%;
-    margin: -1rem auto;
-    background-color: chocolate;
-    padding: 3.5rem 0;
-    overflow: auto;
-
-}
-
-
-
-.col-7 {
-    width: calc((100%/12)*7);
-
-
-}
-
-.card {
-    background-color: #fd0962;
-    border: 2px solid black;
-    margin: .5rem 0;
-}
-
-.me {
-    display: flex;
-    flex-direction: row-reverse;
-}
 
 /* #endregion right */
+
+/* media queries */
+@media screen and (max-width: 991px) {
+    .col-md-12 {
+        width: 100%;
+    }
+
+    .box,
+    .banner,
+    .search_bar,
+    .member.box {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 540px) {}
