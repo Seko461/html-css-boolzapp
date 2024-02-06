@@ -45,14 +45,18 @@ body {
     border: 1px dashed black;
     margin: 1rem auto;
     display: flex;
+
     overflow: hidden;
 
 }
 
+
+
+
 .left {
 
     border: 1px dashed black;
-    width: 300px;
+    width: 450px;
     height: 100%;
 
 
@@ -67,7 +71,7 @@ body {
 
 .user {
     align-items: center;
-    padding: 1rem;
+    padding: .5rem;
     justify-content: space-between;
     background-color: var(--boolzapp-primary);
 }
@@ -83,8 +87,64 @@ img {
     padding-right: 1rem;
 }
 
+.banner {
+    padding: .5rem;
+    background-color: var(--boolzapp-accent);
+    align-items: center;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--boolzapp-primary);
+    position: relative;
+}
+
+.search>i {
+    position: absolute;
+    left: 1.75rem;
+    color: var(--boolzapp-darkgrey);
+    font-size: 1.25rem;
+
+}
+
+#search {
+    height: 3rem;
+    width: 96%;
+    padding-left: 3.5rem;
+    font-size: 1.25rem;
+    border: none;
+
+
+}
+
+.notifications {
+    padding: 1rem;
+    font-size: 1.25rem;
+}
+
+a {
+    color: var(--boolzapp-darkgrey);
+}
+
+.icon_box {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.icon_box i {
+    font-size: 1.5rem;
+    color: var(--boolzapp-accent);
+}
+
 .bottom_left {
-    height: calc(100vh - 240px);
+    height: calc(100% - 240px);
     overflow: auto;
 }
 
