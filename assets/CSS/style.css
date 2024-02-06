@@ -189,6 +189,7 @@ p {
 .bottom {
     border: 1px solid black;
     height: 80px;
+    z-index: 2;
 }
 
 .top>.user>.box_message {
@@ -201,6 +202,8 @@ p {
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    background-image: url(/assets/img/mine.jpg);
+    background-repeat: repeat;
 
 }
 
@@ -219,6 +222,30 @@ p {
 .received {
     align-self: flex-start;
 }
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--boolzapp-primary);
+}
+
+.bottom>i {
+    color: var(--boolzapp-darkgrey);
+    font-size: 2rem;
+}
+
+#text {
+    height: 3.5rem;
+    width: 70%;
+    border-radius: 5px;
+    padding-left: 1.5rem;
+    font-size: 1.05rem;
+    color: var(--boolzapp-grey);
+    margin: 0 3rem;
+    border: none;
+}
+
 
 
 
