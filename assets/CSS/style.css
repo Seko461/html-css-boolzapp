@@ -16,20 +16,25 @@
     --boolzapp-darkgrey: #6b7376;
 }
 
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
     display: none;
-} */
+}
 
 body {
     height: 100vh;
     background: rgb(0, 150, 136);
     background: linear-gradient(180deg, rgba(0, 150, 136, 1) 15%, rgba(220, 219, 209, 1) 15%, rgba(211, 219, 220, 1) 80%);
+
 }
 
 
 .debug {
     border: 1px dashed black;
 
+}
+
+.d-flex {
+    display: flex;
 }
 
 #app {
@@ -41,6 +46,7 @@ body {
     margin: 1rem auto;
     display: flex;
     overflow: hidden;
+
 }
 
 .left {
@@ -48,6 +54,7 @@ body {
     border: 1px dashed black;
     width: 300px;
     height: 100%;
+
 
 }
 
@@ -58,10 +65,31 @@ body {
     height: 80px;
 }
 
-.list {
-    height: calc(100%-240px);
-    overflow-y: scroll;
+.user {
+    align-items: center;
+    padding: 1rem;
+    justify-content: space-between;
+    background-color: var(--boolzapp-primary);
+}
 
+img {
+    border-radius: 50%;
+}
+
+.icons {
+    gap: 1rem;
+    font-size: 1.5rem;
+    color: var(--boolzapp-grey);
+    padding-right: 1rem;
+}
+
+.bottom_left {
+    height: calc(100vh - 240px);
+    overflow: auto;
+}
+
+.box_message {
+    flex-grow: 1;
 }
 
 .right {
@@ -103,13 +131,17 @@ body {
     align-self: flex-start;
 }
 
+
+
 @media screen and (max-width: 991px) {
     .left {
-        width: 80px;
+        width: 100px;
     }
 
     .banner,
-    .search {
+    .search,
+    .box_message,
+    .icons {
         display: none;
     }
 
@@ -117,6 +149,12 @@ body {
         margin: 0;
         height: 100%;
     }
+
+    .user {
+        justify-content: center;
+    }
+
+
 }
 
 
