@@ -26,7 +26,7 @@ body {
     background: linear-gradient(180deg, rgba(0, 150, 136, 1) 15%, rgba(220, 219, 209, 1) 15%, rgba(211, 219, 220, 1) 80%);
     display: flex;
     justify-content: center;
-    overflow: hidden;
+
 }
 
 
@@ -34,7 +34,7 @@ body {
     width: 80vw;
     max-width: 1520px;
     height: 95vh;
-    min-height: 500px;
+    min-height: 300px;
     max-height: 1200px;
     margin: auto;
     border: 2px solid yellow;
@@ -45,58 +45,25 @@ body {
     height: 100%;
     border: 2px solid purple;
     display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    overflow: hidden;
+
+
 }
 
-.main_row {
-    display: flex;
-    flex-direction: row;
-    height: 85vh;
+.row {
     width: 100%;
-    position: absolute;
-    top: 90px;
 
-}
+    display: flex;
+    flex-direction: column;
 
-.main.left {
-    height: 100%;
-
-}
-
-.banner {
-    height: 100px;
     background-color: #8edafc;
 }
 
-.search_bar {
-    height: 60px;
-    background-color: #d5f9ba;
-}
-
-.list {
-    height: 100%;
-    background-color: brown;
-    overflow-y: auto;
-
-}
-
-.member {
-    height: 100px;
-    background-color: yellow;
-    border: 1px solid black;
+.d-flex {
     display: flex;
-    align-items: center;
 }
 
-.main.right {
-    padding: 3rem 2rem;
-
-}
-
-.col-3 {
-    width: calc((100%/12)*3);
+.column {
+    flex-direction: column;
 }
 
 .col-4 {
@@ -109,31 +76,24 @@ body {
 
 }
 
-.col-9 {
-    width: calc((100%/12)*9);
+.top {
+    height: 100px;
+    background-color: plum;
+    border: 1px solid yellow;
 }
 
-.top {
-    background-color: purple;
-    height: 90px;
+.top>.left,
+.main>.left {
     display: flex;
+
 }
 
 .main {
     height: 100%;
-    background-color: #0096876c;
+    background-color: chocolate;
+    overflow: hidden;
 }
 
-.bottom {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
-.bottom.col-8 {
-    background-color: purple;
-    height: 90px;
-}
 
 .avatar {
     height: 90px;
@@ -147,23 +107,42 @@ body {
     background-color: #6b7376;
 }
 
-/* #region left */
+.banner {
+    height: 100px;
+    width: 100%;
+    background-color: #8edafc;
+    position: sticky;
+}
+
+.search_bar {
+    height: 60px;
+    width: 100%;
+    background-color: #d5f9ba;
+
+}
+
+.main.left {
+    overflow-y: scroll;
+}
 
 
 
 
 
-/* #endregion left */
-
-/* #region right */
 
 
-/* #endregion right */
+
+
+
 
 /* media queries */
 @media screen and (max-width: 991px) {
     .col-md-12 {
         width: 100%;
+    }
+
+    .bottom {
+        flex-grow: 1;
     }
 
     .box,
@@ -172,6 +151,8 @@ body {
     .member.box {
         display: none;
     }
+
+
 }
 
 
