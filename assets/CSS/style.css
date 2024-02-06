@@ -230,7 +230,8 @@ p {
     .banner,
     .search,
     .box_message,
-    .icons {
+    .icons,
+    .hour {
         display: none;
     }
 
@@ -250,11 +251,22 @@ p {
     }
 
 
+    .top>.user>.box_message {
+        flex-direction: column;
+    }
+
+    .top>.user>.box_message,
+    .top>.user>.icons {
+        display: inline-flex;
+    }
+
 }
 
 
 @media screen and (max-width: 540px) {
-    .left {
+
+    .left,
+    .top>.user>.icons {
         display: none;
     }
 }
